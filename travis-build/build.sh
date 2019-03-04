@@ -18,7 +18,7 @@ mkdir $UNITY_BUILD_DIR
   -silent-crashes \
   -logFile \
   -projectPath "$PROJECT_PATH" \
-  -buildWindows64Player  "$(pwd)/build/win/ci-build.exe" \
+  -executeMethod ProjectBuilder.PerformPCBuildClient \
   -quit \
   | tee "$LOG_FILE"
   
