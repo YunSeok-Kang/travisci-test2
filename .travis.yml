@@ -33,3 +33,4 @@ deploy:
   overwrite: true
   on:
     tags: true
+    repo: YunSeok-Kang/travisci-test2
