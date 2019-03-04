@@ -3,8 +3,12 @@ osx_image: xcode9.2
 rvm:
 - 2.2
 env:
-- TRAVIS_TAG="travis_test" PROJECT_NAME="testpackage" UNITY_PROJECT_PATH="UnityExample"
-  DEPLOY_UNITYPACKAGE="path set in deploy script"
+  matrix:
+  - TRAVIS_TAG="travis_test" PROJECT_NAME="testpackage" UNITY_PROJECT_PATH="UnityExample"
+    DEPLOY_UNITYPACKAGE="path set in deploy script"
+  global:
+  - secure: ocEySsKj7rRltKfsrL6EJjisf8lcEq1bHPUbIuS5Xc1XVB1QwIgITVwEN9nS+vVosj8Y7Dod+REFGyFbbzcABlxEqNz5UwqxxdVd12fcTxl3+cuTJtFGmykG1pFxhwpPT6aShLS6Ecq48MgipO3dG0BCYIGUUBaBClzFexCVoQHvz7/yQG7tL8tt4bE9s6BoeUvBwscjzODi35ZNrUNeWxmXLwkhOcZVVlt9O6p+W3/iIhWt5Nj6CK62+7fkOHJpX5lshAlE2BWF0WhyibuYZ4zP8alKK/Y+2d6sFOm/R6OITqhuBpfiDlb1DC+Ocfcbx6EjdN32y0udDIOYHNR6Dv/r05QM4Jj1wCDaz2W4EaVDhQRiz8gzmpLnr5g8Y1cNpsHzV22x3XbRWJRPWg+QZhtxqkMJFncCzxCncOZ8km7lpRgTuyzMS4cqRAT++vVtJXDK/cffAJitaF8KZV3AvfyyuzXRBWO31b+L5G5xL0WinmYLTXfTZccsVqeyAy3ZGfs9PvaibwK8Y00EL3khjH+TXF2XTWiKxtZNWAiJ5l53kVTp9Mrg2V6c/FGZQmb3V8Rojjp/ANGhFSv07Tx/FG9MGAKQ1GKbfc+UdNdpgL0hWK6NWB02hewtyCusZjrfbe/TvAmmmzGnur+AmF7NItOTvuYYHXhhmqUzEJNV43A=
+  - secure: R3SBb25A6FD0h/YPLmtB1Aqb6enDXgPgjK9doGbnBcY9XSgS4p9Dg41HNGIiZaNIY7peG3s3ILPMrc6Eh/wYd4jn30rIlmFTKqno9MIVWqBczQP2yJqfHqUq6S3BCPCTmWzIz3VsGBaklT0g45uPdw9UtvwcxD14M5GTPSTGvaGyQTK/KW5Q3Fh6uDumbhzQIApNUlRdNFLuT90+14l40YxmhsbC7K9oRCSsw5m13jjfR6bQAz8BAESgMlhAWCIDZZV/pKocNUq0Z7VbmmeenZmaSQHp/SIFUyIwdh7JBPCE3fp49GCViVwzI0Nt6X0ZHeAXemEH9XBemfUUedy067STvU0higovr7Yl1mzcnTRxWHwVWv4AqcCZ49tKeFg5sAeP2YIoYP2y9TsOHW/PslPyEFQn4GzUDmz7dbg14Vk+eBPlEfAU+5FnnTQ0h7WNwSpikH8T/tQxCJlsIdRpAwLN5MbK3ic+4qkQG11vfFAvRQebT3reiq7CYx6C4cbaXRab7kvohxzMt50C1Jpq17fk97glxQIZPFdgRNWviQiT5a7N8q77CPLLooY6WfEtrYUl5XB42+FJZ+PIpFtz/HPpgpbFOJqy5HYuAb6GXA3Ig7z9m0RoWRpZOVyahzcdBqu4dE4oALujfwfrIYRI3R0u8dGXVsB4sUpnokuFVsQ=
 cache:
   directories:
   - "$UNITY_DOWNLOAD_CACHE"
@@ -24,8 +28,8 @@ deploy:
   provider: releases
   api_key:
     secure: qzSalLHJh2cDYqPQRxck5xbZqIg+HLf3iVFgF0LULt6UAt39xW1lbGoGcKTemNrxpE5wU4u0D7HN0tLFfy2qqmlHJHcjsJnQwe6m0dak0ON/vY23/JSwczCDG57hd/0tMGRhX1wNKtpq+ahA0oEcDHUgllpZwStymrHqFxCc50eS2ZpD3MB4f//GmbJIS6hswyybr/Eh9PUNra4eSpnmMVaEh0TUc5e+Y1waJqa2Ftwsi2DPzMMON1haikw+n+WzQhhC8B9hTML2CAyQnUFjjrgJ2u/JL0J5hPuqTNDWESHT1iajbUjfbH5UO+Bp10o+xYaF6BrJcaxWnW8zr7XjojntVqz+55sz8YfrsAnaDrgDDurGK5C2j4lvKuQ//6vC3E1h+HARKz89QHrM6pMVL4ZGRYemI7C3wfPuGd6BDeKSCin2RsnHGbSzvTTlJkF8Kw4wtG47nfSaj3zTO7z2pi2v2ImiqJR7Iyg7CbdtC9lQYP88rxwmC4Kw0nYBji9yIZTNdbcjV7Fx3NMA98yEPzXh930meBzUMqzRemWlr7PDH7SuRGTZ7zb/RHRVGV/oKGzzTfC4uvE7O70lgHre3bdhIkxAy2Sm103khFoDL04gmQHusb2XHH+cC453pkbXT6sOaf5g/a+y4feqIUvj/XYrY/87HzxkOMkDVx7OEok=
-  file: $DEPLOY_UNITYPACKAGE
+  file: "$DEPLOY_UNITYPACKAGE"
   skip_cleanup: true
   overwrite: true
   on:
-    tags: true 
+    tags: true
