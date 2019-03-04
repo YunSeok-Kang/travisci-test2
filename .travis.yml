@@ -4,7 +4,7 @@ rvm:
 - 2.2
 env:
   matrix:
-  - TRAVIS_TAG="travis_test" PROJECT_NAME="testpackage" UNITY_PROJECT_PATH="UnityExample"
+  - TRAVIS_TAG="travis_test" PROJECT_NAME="testpackage" UNITY_PROJECT_PATH="buildproject"
     DEPLOY_UNITYPACKAGE="path set in deploy script"
   global:
   - secure: ocEySsKj7rRltKfsrL6EJjisf8lcEq1bHPUbIuS5Xc1XVB1QwIgITVwEN9nS+vVosj8Y7Dod+REFGyFbbzcABlxEqNz5UwqxxdVd12fcTxl3+cuTJtFGmykG1pFxhwpPT6aShLS6Ecq48MgipO3dG0BCYIGUUBaBClzFexCVoQHvz7/yQG7tL8tt4bE9s6BoeUvBwscjzODi35ZNrUNeWxmXLwkhOcZVVlt9O6p+W3/iIhWt5Nj6CK62+7fkOHJpX5lshAlE2BWF0WhyibuYZ4zP8alKK/Y+2d6sFOm/R6OITqhuBpfiDlb1DC+Ocfcbx6EjdN32y0udDIOYHNR6Dv/r05QM4Jj1wCDaz2W4EaVDhQRiz8gzmpLnr5g8Y1cNpsHzV22x3XbRWJRPWg+QZhtxqkMJFncCzxCncOZ8km7lpRgTuyzMS4cqRAT++vVtJXDK/cffAJitaF8KZV3AvfyyuzXRBWO31b+L5G5xL0WinmYLTXfTZccsVqeyAy3ZGfs9PvaibwK8Y00EL3khjH+TXF2XTWiKxtZNWAiJ5l53kVTp9Mrg2V6c/FGZQmb3V8Rojjp/ANGhFSv07Tx/FG9MGAKQ1GKbfc+UdNdpgL0hWK6NWB02hewtyCusZjrfbe/TvAmmmzGnur+AmF7NItOTvuYYHXhhmqUzEJNV43A=
