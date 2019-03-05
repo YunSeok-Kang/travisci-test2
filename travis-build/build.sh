@@ -51,8 +51,9 @@ fi
 #echo 'Build logs:'
 #cat $LOG_FILE
 
+ls "$PROJECT_PATH/Asset\n"
+echo "And...\n"
 ls "$PROJECT_PATH"
-ls "$PROJECT_PATH/Build"
 
 echo "Finishing with code $ERROR_CODE"
 exit $ERROR_CODE
