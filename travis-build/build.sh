@@ -4,35 +4,15 @@ PROJECT_PATH=$(pwd)/$UNITY_PROJECT_PATH
 UNITY_BUILD_DIR=$(pwd)/Build
 LOG_FILE=$UNITY_BUILD_DIR/unity-win.log
 
-returnLicense() {
-    echo "Return license"
-
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
-        -batchmode \
-        -returnlicense \
-        -quit
-}
-
-activateLicense() {
-    echo "Activate Unity"
-
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
-        -username ${UNITY_USER} \
-        -password ${UNITY_PWD} \
-        -batchmode \
-        -noUpm \
-        -quit
-}
-
 ERROR_CODE=0
 echo "Items in project path ($PROJECT_PATH):"
 ls "$PROJECT_PATH"
-
 
 echo "Building project for Windows..."
 mkdir $UNITY_BUILD_DIR
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
+  -nographics \
   -silent-crashes \
   -logFile \
   -projectPath "$PROJECT_PATH" \
@@ -50,10 +30,6 @@ fi
 
 #echo 'Build logs:'
 #cat $LOG_FILE
-
-ls "$PROJECT_PATH/Assets"
-echo "And...\n"
-ls "$PROJECT_PATH"
 
 echo "Finishing with code $ERROR_CODE"
 exit $ERROR_CODE
