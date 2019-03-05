@@ -1,5 +1,5 @@
-language: generic
-osx_image: xcode10
+language: objective-c
+osx_image: xcode9
 rvm:
 - 2.1.2
 env:
