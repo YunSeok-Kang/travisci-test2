@@ -18,7 +18,7 @@ before_install:
 install:
 - cat /etc/hosts
 - "./travis-build/install-unity.sh"
-- "./travis-build/download-license.sh"
+#- "./travis-build/download-license.sh"
 script:
 - "./travis-build/build.sh"
 - "./travis-build/run-tests.sh"
