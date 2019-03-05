@@ -9,6 +9,7 @@
 curl -O "${UNITY_LICENSE}"
 
 ls
+ls ~/Library
 
 mkdir -p ~/Library/Unity/Certificates
 mv CACerts.pem ~/Library/Unity/Certificates
