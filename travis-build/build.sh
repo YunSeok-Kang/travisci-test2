@@ -24,8 +24,6 @@ activateLicense() {
         -quit
 }
 
-activateLicense
-
 ERROR_CODE=0
 echo "Items in project path ($PROJECT_PATH):"
 ls "$PROJECT_PATH"
@@ -41,8 +39,6 @@ mkdir $UNITY_BUILD_DIR
   -executeMethod ProjectBuilder.PerformPCBuildClient \
   -quit \
   | tee "$LOG_FILE"
-  
-returnLicense
   
 if [ $? = 0 ] ; then
   echo "Building Windows exe completed successfully."
