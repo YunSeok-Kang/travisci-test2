@@ -14,6 +14,7 @@ RELEASE_ZIP_FILE=$RELEASE_DIRECTORY/$PROJECT_NAME-v$TRAVIS_TAG.zip
 mkdir -p $RELEASE_DIRECTORY
 
 echo "Preparing release for version: $TRAVIS_TAG"
+cp -r $PROJECT_PATH/Build $RELEASE_DIRECTORY
 
 echo "Files in release directory:"
 ls $RELEASE_DIRECTORY
