@@ -51,7 +51,7 @@ fi
 #echo 'Build logs:'
 #cat $LOG_FILE
 
-ls "$PROJECT_PATH/Asset\n"
+ls "$PROJECT_PATH/Assets"
 echo "And...\n"
 ls "$PROJECT_PATH"
 
