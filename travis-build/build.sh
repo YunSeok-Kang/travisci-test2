@@ -5,17 +5,16 @@ UNITY_BUILD_DIR=$(pwd)/Build
 LOG_FILE=$UNITY_BUILD_DIR/unity-win.log
 
 returnLicense() {
-    echo "[SYNG2] Return license"
+    echo "Return license"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
         -batchmode \
         -returnlicense \
         -quit
-    cat "$(pwd)/unity.returnlicense.log"
 }
 
 activateLicense() {
-    echo "[SYNG2] Activate Unity"
+    echo "Activate Unity"
 
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
         -username ${UNITY_USER} \
@@ -23,8 +22,6 @@ activateLicense() {
         -batchmode \
         -noUpm \
         -quit
-    echo "[SYNG2] Unity activation log"
-    cat "${TRAVIS_BUILD_DIR}/unity.activation.log"
 }
 
 activateLicense
@@ -45,7 +42,7 @@ mkdir $UNITY_BUILD_DIR
   -quit \
   | tee "$LOG_FILE"
   
-  returnLicense
+returnLicense
   
 if [ $? = 0 ] ; then
   echo "Building Windows exe completed successfully."
