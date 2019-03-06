@@ -16,7 +16,7 @@ mkdir $UNITY_BUILD_DIR
   -silent-crashes \
   -logFile \
   -projectPath "$PROJECT_PATH" \
-  -executeMethod ProjectBuilder.PerformPCBuildClient \
+  -executeMethod Build.ProjectBuilder.PerformPCBuildClient \
   -quit \
   | tee "$LOG_FILE"
   
