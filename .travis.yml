@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode9
 rvm:
-- 2.1.2
+- 2.2
 env:
   matrix:
   - TRAVIS_TAG="travis_test_6" PROJECT_NAME="testpackage" UNITY_PROJECT_PATH="buildproject"
