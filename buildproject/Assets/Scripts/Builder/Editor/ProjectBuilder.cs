@@ -43,10 +43,7 @@ public class ProjectBuilder
 		PlayerSettings.applicationIdentifier = "com.Voxellers.TestBuild"; // 빌드 세팅에 필요한 해당 정보 등은 특정한 Custom Editor로 모아 편집이 가능하도록 수정해야할 것으로 보임.
 
 		EditorUserBuildSettings.SwitchActiveBuildTarget(buildTargetGroup, build_target);
-		UnityEditor.Build.Reporting.BuildReport res = BuildPipeline.BuildPlayer(scenes, target_path, build_target, build_options);
-
-		// 빌드 번호 설정해줘야 함.
-		BuildReportMaker buildReportMaker = new BuildReportMaker(buildReportFileName, res);
+		string tempResult = BuildPipeline.BuildPlayer(scenes, target_path, build_target, build_options);
 	}
 
 	[MenuItem("Custom/CI/Build PC")]
