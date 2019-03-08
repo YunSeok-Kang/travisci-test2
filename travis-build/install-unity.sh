@@ -8,6 +8,10 @@ UNITY_DOWNLOAD_CACHE="$(pwd)/unity_download_cache"
 #UNITY_OSX_PACKAGE_URL="https://download.unity3d.com/download_unity/46dda1414e51/MacEditorInstaller/Unity-2017.2.0f3.pkg"
 #UNITY_WINDOWS_TARGET_PACKAGE_URL="https://beta.unity3d.com/download/46dda1414e51/MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-2017.2.0f3.pkg"
 
+# Android Settings
+androidBuildToolsVersion="25.0.2"
+androidPlatformVerion="android-23"
+
 # 2017.3.0f3
 UNITY_OSX_PACKAGE_URL="https://download.unity3d.com/download_unity/a9f86dcd79df/MacEditorInstaller/Unity-2017.3.0f3.pkg"
 UNITY_WINDOWS_TARGET_PACKAGE_URL="https://download.unity3d.com/download_unity/a9f86dcd79df/MacEditorTargetInstaller/UnitySetup-Windows-Support-for-Editor-2017.3.0f3.pkg"
@@ -68,4 +72,6 @@ export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
 echo "executing: sdkmanager --update"
 yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager --update
 yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;${androidBuildToolsVersion}" "platform-tools" "platforms;${androidPlatformVerion}"
+#yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;25.0.2" "platform-tools" "platforms;${androidPlatformVerion}"
+
 
