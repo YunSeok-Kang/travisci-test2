@@ -71,7 +71,7 @@ export ANDROID_NDK_HOME="/usr/local/share/android-ndk"
 
 echo "executing: sdkmanager --update"
 yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager --update
-yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;${androidBuildToolsVersion}" "platform-tools" "platforms;${androidPlatformVerion}"
-#yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;25.0.2" "platform-tools" "platforms;${androidPlatformVerion}"
+#yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;${androidBuildToolsVersion}" "platform-tools" "platforms;${androidPlatformVerion}"
+yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;25.0.2" "platform-tools" "platforms;${androidPlatformVerion}"
 
 
