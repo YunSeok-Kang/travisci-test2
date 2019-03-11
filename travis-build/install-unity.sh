@@ -42,17 +42,18 @@ install() {
 	sudo installer -dumplog -package $UNITY_DOWNLOAD_CACHE/`basename "$PACKAGE_URL"` -target /
 }
 
-: <<'END'
-
-echo "executing: brew update"
-brew update
-
 echo "Contents of Unity Download Cache:"
 ls $UNITY_DOWNLOAD_CACHE
 
 echo "Installing Unity..."
 install $UNITY_OSX_PACKAGE_URL
 install $UNITY_WINDOWS_TARGET_PACKAGE_URL
+
+: <<'END'
+
+echo "executing: brew update"
+brew update
+
 install $UNITY_ANDROID_TARGET_PACKAGE_URL
 
 # android build environment
