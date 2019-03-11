@@ -16,7 +16,7 @@ echo "Building project for Android..."
 mkdir $UNITY_BUILD_DIR
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
-  -nographics \
+#  -nographics \
   -silent-crashes \
   -logFile \
   -projectPath "$PROJECT_PATH" \
