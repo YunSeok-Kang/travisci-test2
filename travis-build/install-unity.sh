@@ -42,6 +42,8 @@ install() {
 	sudo installer -dumplog -package $UNITY_DOWNLOAD_CACHE/`basename "$PACKAGE_URL"` -target /
 }
 
+: <<'END'
+
 echo "executing: brew update"
 brew update
 
@@ -54,7 +56,7 @@ install $UNITY_WINDOWS_TARGET_PACKAGE_URL
 install $UNITY_ANDROID_TARGET_PACKAGE_URL
 
 # android build environment
-: <<'END'
+
 echo "executing: brew cask install caskroom/versions/java8"
 brew cask install caskroom/versions/java8
 echo "executing: export JAVA_HOME=$(/usr/libexec/java_home)"
