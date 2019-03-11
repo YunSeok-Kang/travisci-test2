@@ -19,8 +19,8 @@ mkdir $UNITY_BUILD_DIR
   -silent-crashes \
   -logFile \
   -projectPath "$PROJECT_PATH" \
-  #-executeMethod ProjectBuilder.PerformPCBuildClient \
-  -executeMethod ProjectBuilder.PerformAndroidBuildClient \
+  -executeMethod ProjectBuilder.PerformPCBuildClient \
+  #-executeMethod ProjectBuilder.PerformAndroidBuildClient \
   -quit \
   | tee "$LOG_FILE"
   

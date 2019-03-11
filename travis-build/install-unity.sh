@@ -54,6 +54,7 @@ install $UNITY_WINDOWS_TARGET_PACKAGE_URL
 install $UNITY_ANDROID_TARGET_PACKAGE_URL
 
 # android build environment
+: <<'END'
 echo "executing: brew cask install caskroom/versions/java8"
 brew cask install caskroom/versions/java8
 echo "executing: export JAVA_HOME=$(/usr/libexec/java_home)"
@@ -73,5 +74,5 @@ echo "executing: sdkmanager --update"
 yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager --update
 #yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;${androidBuildToolsVersion}" "platform-tools" "platforms;${androidPlatformVerion}"
 yes y | ${ANDROID_SDK_ROOT}/tools/bin/sdkmanager "build-tools;${androidBuildToolsVersion}" "platform-tools" "platforms;${androidPlatformVerion}"
-
+END
 
